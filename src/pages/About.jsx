@@ -18,10 +18,17 @@ const About = () => {
 
   const experienceItems = [
     {
-      title: t('about_exp_jio_title'),
+      title: t('about_exp_jio_title_1'),
       company: 'Jio Platforms Limited',
-      period: t('about_exp_jio_period'),
-      description: t('about_exp_jio_description'),
+      period: t('about_exp_jio_period_1'),
+      description: t('about_exp_jio_description_1'),
+      icon: <FaBriefcase className="text-blue-500" />
+    },
+    {
+      title: t('about_exp_jio_title_2'),
+      company: 'Jio Platforms Limited',
+      period: t('about_exp_jio_period_2'),
+      description: t('about_exp_jio_description_2'),
       icon: <FaBriefcase className="text-blue-500" />
     },
     // Add other experience items
@@ -29,10 +36,24 @@ const About = () => {
 
   const educationItems = [
     {
-      degree: t('about_edu_degree'),
+      degree: t('about_edu_degree_1'),
       institution: 'SRM Institute of Science and Technology',
-      period: t('about_edu_period'),
+      period: t('about_edu_period_1'),
       score: '78%',
+      icon: <FaGraduationCap className="text-purple-500" />
+    },
+    {
+      degree: t('about_edu_degree_2'),
+      institution: 'SKD Academy',
+      period: t('about_edu_period_2'),
+      score: '76%',
+      icon: <FaGraduationCap className="text-purple-500" />
+    },
+    {
+      degree: t('about_edu_degree_3'),
+      institution: 'SKD Academy',
+      period: t('about_edu_period_3'),
+      score: '69%',
       icon: <FaGraduationCap className="text-purple-500" />
     }
   ];
