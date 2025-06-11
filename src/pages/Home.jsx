@@ -79,7 +79,7 @@ const Home = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                      <motion.a
-                        href="#contact"
+                        href="/contact"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all"
@@ -88,7 +88,7 @@ const Home = () => {
                      </motion.a>
 
                      <motion.a
-                        href="/resume.pdf"
+                        href="/Sachin_Yadav_MERN.pdf"
                         download
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
