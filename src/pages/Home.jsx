@@ -14,20 +14,20 @@ const Home = () => {
    const socialLinks = [
       {
          name: 'GitHub',
-         url: 'https://github.com',
+         url: 'https://github.com/sachinyadav2704',
          icon: <FaGithub className="w-6 h-6" />,
          color: 'hover:text-gray-800',
       },
       {
          name: 'LinkedIn',
-         url: 'https://linkedin.com',
+         url: 'https://www.linkedin.com/in/sachin-yadav-b57426141/',
          icon: <FaLinkedin className="w-6 h-6" />,
          color: 'hover:text-blue-600',
       },
       {
          name: 'Email',
-         url: 'mailto:contact@example.com',
-         icon: <HiOutlineMail className="w-6 h-6" />,
+         url: 'mailto:sachin2704.yadav@gmail.com',
+         con: <HiOutlineMail className="w-6 h-6" />,
          color: 'hover:text-red-500',
       },
    ];
