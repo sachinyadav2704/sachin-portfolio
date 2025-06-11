@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, LazyMotion, domAnimation } from 'framer-motion';
 import SEO from '../components/SEO';
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
@@ -27,7 +28,7 @@ const Home = () => {
       {
          name: 'Email',
          url: 'mailto:sachin2704.yadav@gmail.com',
-         con: <HiOutlineMail className="w-6 h-6" />,
+         icon: <HiOutlineMail className="w-6 h-6" />,
          color: 'hover:text-red-500',
       },
    ];
@@ -78,25 +79,29 @@ const Home = () => {
                   </motion.p>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                     <motion.a
-                        href="/contact"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all"
-                     >
-                        {t('hire_me')}
-                     </motion.a>
+                     <motion.div className="flex flex-col sm:flex-row gap-4">
+                        {/* Internal Navigation using React Router */}
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                           <Link
+                              to="/contact"
+                              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all inline-block"
+                           >
+                              {t('hire_me')}
+                           </Link>
+                        </motion.div>
 
-                     <motion.a
-                        href="/Sachin_Yadav_MERN.pdf"
-                        download
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
-                     >
-                        <FaFileDownload />
-                        {t('download_cv')}
-                     </motion.a>
+                        {/* File Download - must use <a> tag for download */}
+                        <motion.a
+                           href="/Sachin_Yadav_MERN.pdf"
+                           download
+                           whileHover={{ scale: 1.05 }}
+                           whileTap={{ scale: 0.95 }}
+                           className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                        >
+                           <FaFileDownload />
+                           {t('download_cv')}
+                        </motion.a>
+                     </motion.div>
                   </div>
 
                   {/* Social Links */}
@@ -128,40 +133,6 @@ const Home = () => {
                   {/* <DeveloperIllustration /> */}
                   <CodeEditorIllustration />
                </LazyMotion>
-               {/* <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative w-full max-w-lg mx-auto lg:mx-0">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-lg opacity-30"></div>
-              <img 
-                src="/developer-illustration.svg" 
-                alt={t('developer_illustration_alt')} 
-                className="relative w-full h-auto"
-              />
-            </div>
-            
-            <AnimatePresence>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="absolute -bottom-8 left-0 bg-white shadow-lg rounded-full px-4 py-2 flex items-center"
-              >
-                <span className="text-sm font-medium text-gray-700">
-                  {t('expert_in')}:
-                </span>
-                <div className="flex ml-2">
-                  <img src="/react-icon.svg" alt="React" className="w-6 h-6 mx-1" />
-                  <img src="/nodejs-icon.svg" alt="Node.js" className="w-6 h-6 mx-1" />
-                  <img src="/redux-icon.svg" alt="Node.js" className="w-6 h-6 mx-1" />
-                  <img src="/mongodb-icon.svg" alt="MongoDB" className="w-6 h-6 mx-1" />
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div> */}
             </div>
          </div>
       </section>
